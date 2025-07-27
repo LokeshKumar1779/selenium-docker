@@ -1,0 +1,13 @@
+{
+  "firstname": "Jatin",
+  "lastname": "Dev",
+  "email": "jatin@gmail.com",
+  "password": "password123",
+  "street": "123 Main St",
+  "city": "Springfield",
+  "zip": "12345",
+  "departure": "New York",
+  "arrival": "Sydney",
+  "noOfPassengers": "4",
+  "expectedPrice": "$2338 USD"
+}

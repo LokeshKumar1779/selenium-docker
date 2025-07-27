@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="vendor-portal-suite" verbose="1"
+        parallel="tests"
+        thread-count="3"
+        configfailurepolicy="continue">
+    <test name="vendor-portal-test-1" >
+        <parameter name="testDataPath" value="test-data/vendor-portal/sam.json"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.lokesh.tests.vendorportal.VendorPortalTest" />
+        </classes>
+    </test>
+    <test name="vendor-portal-test-2" >
+        <parameter name="testDataPath" value="test-data/vendor-portal/mike.json"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.lokesh.tests.vendorportal.VendorPortalTest" />
+        </classes>
+    </test>
+    <test name="vendor-portal-test-3" >
+        <parameter name="testDataPath" value="test-data/vendor-portal/john.json"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.lokesh.tests.vendorportal.VendorPortalTest" />
+        </classes>
+    </test>
+</suite>

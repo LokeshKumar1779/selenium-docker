@@ -1,0 +1,13 @@
+{
+  "firstname": "Marshall",
+  "lastname": "Mathers",
+  "email": "marshall@gmail.com",
+  "password": "password123",
+  "street": "123 Main St",
+  "city": "Springfield",
+  "zip": "12345",
+  "departure": "London",
+  "arrival": "Sydney",
+  "noOfPassengers": "2",
+  "expectedPrice": "$1169 USD"
+}

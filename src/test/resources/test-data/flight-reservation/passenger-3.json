@@ -1,0 +1,13 @@
+{
+  "firstname": "Darrek",
+  "lastname": "McDonald",
+  "email": "darrek@gmail.com",
+  "password": "password123",
+  "street": "123 Main St",
+  "city": "Springfield",
+  "zip": "12345",
+  "departure": "Frankfurt",
+  "arrival": "Paris",
+  "noOfPassengers": "3",
+  "expectedPrice": "$1753 USD"
+}
