@@ -19,7 +19,8 @@ pipeline{
             }
             steps{
                 echo 'Logging in to Docker Hub...'
-                sh "docker login -u ${DOCKER_HUB_CREDS_USR} -p ${DOCKER_HUB_CREDS_PSW}"
+//                 sh "docker login -u ${DOCKER_HUB_CREDS_USR} -p ${DOCKER_HUB_CREDS_PSW}"
+                sh "echo ${DOCKER_HUB_CREDS_PSW} | docker login -u ${DOCKER_HUB_CREDS_USR} --password-stdin"
                 echo 'Pushing Docker image to Docker Hub...'
                 sh "docker push kumarlokesh57/selenium"
             }
