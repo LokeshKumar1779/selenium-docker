@@ -10,19 +10,21 @@ pipeline{
         stage('Build docker image'){
             steps{
                 echo 'Building Docker image...'
-                sh "docker build -t kumarlokesh57/selenium ."
+                sh "docker build -t kumarlokesh57/selenium:latest ."
             }
         }
         stage('Push docker image'){
-            environment {
-                DOCKER_HUB_CREDS = credentials('dockerhub-creds')
+            environment{
+                DOCKER_HUB = credentials('dockerhub-creds')
             }
             steps{
-                echo 'Logging in to Docker Hub...'
+//                 echo 'Logging in to Docker Hub...'
 //                 sh "docker login -u ${DOCKER_HUB_CREDS_USR} -p ${DOCKER_HUB_CREDS_PSW}"
-                sh "echo ${DOCKER_HUB_CREDS_PSW} | docker login -u ${DOCKER_HUB_CREDS_USR} --password-stdin"
-                echo 'Pushing Docker image to Docker Hub...'
-                sh "docker push kumarlokesh57/selenium"
+                sh 'echo ${DOCKER_HUB_PSW} | docker login -u ${DOCKER_HUB_USR} --password-stdin'
+//                 echo 'Pushing Docker image to Docker Hub...'
+                sh 'docker push kumarlokesh57/selenium:latest'
+                sh "docker tag kumarlokesh57/selenium:latest kumarlokesh57/selenium:${env.BUILD_NUMBER}"
+                sh "docker push kumarlokesh57/selenium:$(env.BUILD_NUMBER)"
             }
         }
 
