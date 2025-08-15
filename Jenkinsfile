@@ -24,7 +24,7 @@ pipeline{
 //                 echo 'Pushing Docker image to Docker Hub...'
                 sh 'docker push kumarlokesh57/selenium:latest'
                 sh "docker tag kumarlokesh57/selenium:latest kumarlokesh57/selenium:${env.BUILD_NUMBER}"
-                sh "docker push kumarlokesh57/selenium:$(env.BUILD_NUMBER)"
+                sh "docker push kumarlokesh57/selenium:${env.BUILD_NUMBER}"
             }
         }
 
